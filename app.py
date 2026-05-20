@@ -26,6 +26,23 @@ job_description = st.text_area(
     placeholder="Paste the job description here..."
 )
 
+st.divider()
+
+st.subheader("🎤 Interview Question Generator")
+
+job_title = st.text_input(
+    "Enter Job Title",
+    placeholder="Example: AI Trainer, Data Analyst"
+)
+
+if st.button("Generate Interview Questions"):
+    questions = generate_interview_questions(job_title)
+
+    st.subheader("Interview Questions")
+
+    for i, question in enumerate(questions, start=1):
+        st.write(f"{i}. {question}")
+
 if uploaded_file is not None:
     resume_text = extract_text_from_pdf(uploaded_file)
     score, level, found_keywords, feedback = analyze_resume(resume_text)
