@@ -1,102 +1,48 @@
 # 🚀 CareerPilot AI
 
-AI-powered career assistant platform for resume analysis, ATS scoring, job matching, cover letter generation, and interview preparation.
+AI-powered career assistant platform for resume analysis, ATS optimization, job matching, and cover letter generation.
+
+## 🌐 Live Demo
+
+👉 https://your-streamlit-link.streamlit.app
 
 ---
 
-## ✨ Features
+## Features
 
-✅ Resume ATS Score Analyzer  
-✅ Resume Skill Detection  
-✅ Resume Improvement Suggestions  
+✅ Resume ATS Analysis  
+✅ Skill Detection  
 ✅ Job Description Matching  
-✅ Missing Keywords Detection  
+✅ Missing Keyword Detection  
 ✅ AI Cover Letter Generator  
-✅ Interview Preparation Assistant  
+✅ Resume Text Extraction (PDF)
 
 ---
 
-## 🖼️ Demo
-
-Upload your resume and:
-
-- Analyze ATS score
-- Detect skills
-- Match resume to job descriptions
-- Generate cover letters
-- Get resume improvement suggestions
-
----
-
-## 🛠️ Technologies Used
+## Tech Stack
 
 - Python
 - Streamlit
-- PyPDF2
 - Pandas
-- Plotly
-- Matplotlib
+- PyPDF2
+- NLP / Text Processing
 
 ---
 
-## 📂 Project Structure
+## How It Works
 
-```txt
-careerpilot-ai/
-│── app.py
-│── ats_engine.py
-│── job_matcher.py
-│── cover_letter_generator.py
-│── interview_generator.py
-│── resume_parser.py
-│── requirements.txt
-│── README.md
-```
+1. Upload your resume PDF  
+2. Paste job description  
+3. Get ATS score  
+4. Analyze missing skills  
+5. Generate tailored cover letter
 
 ---
 
-## ⚙️ Installation
-
-Clone the repository:
+## Installation
 
 ```bash
-git clone https://github.com/ghsihem228-ship-it/careerpilot-ai.git
-```
-
-Move into the project folder:
-
-```bash
+git clone https://github.com/yourusername/careerpilot-ai.git
 cd careerpilot-ai
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
 streamlit run app.py
-```
-
----
-
-## 📈 Future Improvements
-
-- AI Resume Optimization
-- LinkedIn Profile Analyzer
-- Smart Career Recommendations
-- Salary Prediction
-- Multi-language Resume Support
-- AI Interview Simulation
-
----
-
-## 👩‍💻 Author
-
-**Sihem Gherissi**  
-Mathematics Graduate | Python | Data Analysis | AI Training Specialist
-
-GitHub: https://github.com/ghsihem228-ship-it
