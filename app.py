@@ -1,5 +1,6 @@
 import streamlit as st
 from resume_parser import extract_text_from_pdf
+from interview_generator import generate_interview_questions
 from ats_engine import analyze_resume
 from job_matcher import match_resume_to_job
 from cover_letter_generator import generate_cover_letter
