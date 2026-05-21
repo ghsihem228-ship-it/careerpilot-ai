@@ -1,3 +1,4 @@
+
 import streamlit as st
 from resume_parser import extract_text_from_pdf
 from career_recommender import recommend_careers
@@ -73,17 +74,28 @@ if uploaded_file is not None:
         st.error(f"Level: {level}")
 
     st.subheader("✅ Detected Skills")
+
     if found_keywords:
         st.write(", ".join(found_keywords))
     else:
         st.write("No important skills detected.")
 
     st.subheader("💡 Improvement Suggestions")
+
     if feedback:
         for item in feedback:
             st.write(f"- {item}")
     else:
         st.success("Excellent resume. No suggestions.")
+
+    st.divider()
+
+    st.subheader("🧠 Career Recommendations")
+
+    careers = recommend_careers(found_keywords)
+
+    for career in careers:
+        st.success(f"✅ {career}")
 
     if job_description.strip() != "":
         st.divider()
@@ -98,12 +110,14 @@ if uploaded_file is not None:
         st.progress(match_score / 100)
 
         st.subheader("✅ Matched Keywords")
+
         if matched_words:
             st.write(", ".join(matched_words[:30]))
         else:
             st.write("No matching keywords found.")
 
         st.subheader("❌ Missing Keywords")
+
         if missing_words:
             for word in missing_words:
                 st.write(f"- {word}")
