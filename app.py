@@ -1,7 +1,7 @@
-
 import streamlit as st
 from resume_parser import extract_text_from_pdf
 from roadmap_generator import generate_learning_roadmap
+from salary_estimator import estimate_salary
 from career_recommender import recommend_careers
 from interview_generator import generate_interview_questions
 from ats_engine import analyze_resume
@@ -62,6 +62,23 @@ if st.button("Generate Learning Roadmap"):
 
     for i, step in enumerate(roadmap, start=1):
         st.write(f"{i}. {step}")
+
+st.divider()
+
+st.subheader("💰 Salary Estimator")
+
+salary_job = st.text_input(
+    "Enter Job Title for Salary Estimate",
+    placeholder="Example: Data Analyst, AI Trainer"
+)
+
+if st.button("Estimate Salary"):
+    salary_data = estimate_salary(salary_job)
+
+    st.subheader("Estimated Salary Range")
+
+    for country, salary in salary_data.items():
+        st.info(f"{country}: {salary}")
 
 if uploaded_file is not None:
     resume_text = extract_text_from_pdf(uploaded_file)
@@ -158,3 +175,4 @@ if uploaded_file is not None:
 
     with st.expander("Extracted Resume Text"):
         st.write(resume_text)
+
