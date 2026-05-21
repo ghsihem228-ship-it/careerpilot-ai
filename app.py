@@ -15,7 +15,7 @@ st.set_page_config(
 )
 st.markdown("""
 <style>
-.stApp {
+.stApp {  
     background-color: #0f172a;
     color: #ffffff;
 }
