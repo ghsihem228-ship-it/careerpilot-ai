@@ -13,7 +13,61 @@ st.set_page_config(
     page_icon="🚀",
     layout="wide"
 )
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0f172a;
+    color: #ffffff;
+}
 
+h1, h2, h3 {
+    color: #38bdf8;
+}
+
+[data-testid="stMetric"] {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+}
+
+.stTextInput input, .stTextArea textarea {
+    background-color: #1e293b;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #38bdf8;
+}
+
+.stButton button {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.stButton button:hover {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+[data-testid="stFileUploader"] {
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+[data-testid="stExpander"] {
+    background-color: #1e293b;
+    border-radius: 12px;
+}
+
+hr {
+    border-color: #334155;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("🚀 CareerPilot AI")
 st.subheader("AI Career Assistant Platform")
 
