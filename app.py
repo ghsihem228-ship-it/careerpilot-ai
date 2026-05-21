@@ -1,6 +1,7 @@
 
 import streamlit as st
 from resume_parser import extract_text_from_pdf
+from roadmap_generator import generate_learning_roadmap
 from career_recommender import recommend_careers
 from interview_generator import generate_interview_questions
 from ats_engine import analyze_resume
@@ -44,6 +45,23 @@ if st.button("Generate Interview Questions"):
 
     for i, question in enumerate(questions, start=1):
         st.write(f"{i}. {question}")
+
+st.divider()
+
+st.subheader("📚 Learning Roadmap Generator")
+
+career_goal = st.text_input(
+    "Enter Career Goal",
+    placeholder="Example: Data Analyst, AI Trainer, Machine Learning Engineer"
+)
+
+if st.button("Generate Learning Roadmap"):
+    roadmap = generate_learning_roadmap(career_goal)
+
+    st.subheader("Your Learning Roadmap")
+
+    for i, step in enumerate(roadmap, start=1):
+        st.write(f"{i}. {step}")
 
 if uploaded_file is not None:
     resume_text = extract_text_from_pdf(uploaded_file)
