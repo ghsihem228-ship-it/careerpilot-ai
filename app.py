@@ -1,3 +1,4 @@
+
 import streamlit as st
 from resume_parser import extract_text_from_pdf
 from roadmap_generator import generate_learning_roadmap
@@ -13,9 +14,10 @@ st.set_page_config(
     page_icon="🚀",
     layout="wide"
 )
+
 st.markdown("""
 <style>
-.stApp {  
+.stApp {
     background-color: #0f172a;
     color: #ffffff;
 }
@@ -31,7 +33,8 @@ h1, h2, h3 {
     border: 1px solid #334155;
 }
 
-.stTextInput input, .stTextArea textarea {
+.stTextInput input,
+.stTextArea textarea {
     background-color: #1e293b;
     color: white;
     border-radius: 10px;
@@ -68,12 +71,32 @@ hr {
 }
 </style>
 """, unsafe_allow_html=True)
-st.title("🚀 CareerPilot AI")
-st.subheader("AI Career Assistant Platform")
 
-st.write(
-    "Upload your resume, analyze your ATS score, and compare it with a job description."
-)
+st.sidebar.title("🚀 CareerPilot AI")
+st.sidebar.markdown("### Navigation")
+st.sidebar.info("AI Career Assistant Platform")
+
+st.sidebar.markdown("""
+### Features
+- 📄 Resume Analyzer
+- 🎯 Job Matcher
+- 🧠 Career Recommendations
+- 🎤 Interview Questions
+- 📚 Learning Roadmap
+- 💰 Salary Estimator
+- 📝 Cover Letter Generator
+""")
+
+st.sidebar.success("Portfolio Project by Sihem")
+
+st.title("🚀 CareerPilot AI")
+
+st.markdown("""
+### AI-Powered Career Assistant Platform
+
+Analyze resumes, match jobs, generate cover letters,  
+estimate salaries, and build your career roadmap.
+""")
 
 uploaded_file = st.file_uploader("Upload Resume PDF", type=["pdf"])
 
@@ -229,4 +252,3 @@ if uploaded_file is not None:
 
     with st.expander("Extracted Resume Text"):
         st.write(resume_text)
-
