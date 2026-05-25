@@ -4,7 +4,7 @@ AI-powered career assistant platform for resume analysis, ATS optimization, job 
 
 ## 🌐 Live Demo
 
-👉 Put your Streamlit link here
+👉 https://careerpilot-ai-yqbxmwirlclpgl3tztggws.streamlit.app
 
 ---
 
